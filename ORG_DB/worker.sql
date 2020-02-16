@@ -124,6 +124,7 @@ from title t, worker w
 where t.worker_ref_id = w.worker_id
 and t.worker_title ='Manager';
 
+-- ------------------------------------------------------------------------------------
 -- SQL Query To Fetch Duplicate Records Having Matching Data In Some Fields Of A Table.
 select * from title
 group by worker_title, affected_from
