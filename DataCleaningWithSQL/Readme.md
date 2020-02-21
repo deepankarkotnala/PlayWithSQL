@@ -76,10 +76,10 @@ Select TRIM(both ' ' FROM '  location ')
 
 POSITION, SUBSTR and CONCAT
 
-The POSITION statement returns the position of the given substring in the target string (counting from the left). If the given substring is not present in the target string, the statement returns a 0. If the given substring is present multiple times, the position of the first occurrence is returned as the output. For example, the following query will return the position of the character ‘A’ (note that the POSITION statement is not case sensitive), where it first appears in the string ‘OJAS’.
+The POSITION statement returns the position of the given substring in the target string (counting from the left). If the given substring is not present in the target string, the statement returns a 0. If the given substring is present multiple times, the position of the first occurrence is returned as the output. For example, the following query will return the position of the character ‘A’ (note that the POSITION statement is not case sensitive), where it first appears in the string ‘DEEPANKAR’.
 
 ```sql
-Select POSITION('A' IN 'OJAS');
+Select POSITION('A' IN 'DEEPANKAR');
 ```
 The SUBSTR statement can be used to extract a string from the middle of another string.
 
@@ -91,7 +91,7 @@ SUBSTR(*string*, *starting character position*, *# of characters*)
 An example is —
 
 ```sql
-Select SUBSTR('OJAS', 2, 3);
+Select SUBSTR('DEEPANKAR', 2, 3);
  ```
 
 The CONCAT statement is used to concatenate characters together to form a single string. Just provide all the characters/substrings as arguments of the CONCAT function in the order you want them to be concatenated, and separate the different characters/substrings with commas. The output will be a concatenated string.
@@ -102,7 +102,7 @@ CONCAT(*substring1*,* substring2*) AS Complete_String
 ```
 An example is —
 ```sql
-Select CONCAT('OJ','AS') as FullName;
+Select CONCAT('DEEP','ANKAR') as FullName;
 ```
 The LOWER and UPPER statements are used to convert a string to lower and upper cases, respectively.
 
