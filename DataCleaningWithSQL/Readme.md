@@ -123,9 +123,12 @@ Output:
 DEEPANKAR
 deepankar
 ```
-
-
 -- --------------------------------------------------------------------
+
+## Date Time
+
+### The EXTRACT statement can be used to get the required information from the ‘Date’ column.
+
 ```sql
 Select CURRENT_TIME() AS time,
 CURRENT_DATE() AS date,
@@ -134,7 +137,21 @@ localtime() AS local,
 LOCALTIMESTAMP() AS localtimestmp,
 NOW() AS now;
 ```
+#### Output
 ```sql
 # time, date, timestmp, local, localtimestmp, now
 '00:45:25', '2020-02-22', '2020-02-22 00:45:25', '2020-02-22 00:45:25', '2020-02-22 00:45:25', '2020-02-22 00:45:25'
+```
+
+
+```sql
+SELECT CURRENT_DATE() AS date, 
+EXTRACT(year FROM NOW()) AS year,
+EXTRACT(month FROM NOW()) AS month,
+EXTRACT(day FROM NOW()) AS day;
+```
+#### Output
+```sql
+# date, year, month, day
+'2020-02-22', '2020', '2', '22'
 ```
