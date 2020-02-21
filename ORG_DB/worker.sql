@@ -129,3 +129,15 @@ and t.worker_title ='Manager';
 select * from title
 group by worker_title, affected_from
 having count(*) > 1;
+
+
+-- ------------------------------------------------------------------------------------
+-- find duplicate employee names
+select FullName 
+	    from (select FullName, count(*) as cnt 
+		  from employee e1 
+		  group by FullName 
+		  having cnt >1) a; 
+		  
+-- ------------------------------------------------------------------------------------
+
