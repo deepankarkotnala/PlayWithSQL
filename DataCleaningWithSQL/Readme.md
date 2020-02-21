@@ -123,3 +123,18 @@ Output:
 DEEPANKAR
 deepankar
 ```
+
+
+-- --------------------------------------------------------------------
+```sql
+Select CURRENT_TIME() AS time,
+CURRENT_DATE() AS date,
+CURRENT_TIMESTAMP() AS timestmp,
+localtime() AS local,
+LOCALTIMESTAMP() AS localtimestmp,
+NOW() AS now;
+```
+```sql
+# time, date, timestmp, local, localtimestmp, now
+'00:45:25', '2020-02-22', '2020-02-22 00:45:25', '2020-02-22 00:45:25', '2020-02-22 00:45:25', '2020-02-22 00:45:25'
+```
