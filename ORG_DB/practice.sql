@@ -539,3 +539,10 @@ select left(current_timestamp, length(current_timestamp) -9);
 -- ------------------------------------------------------------------------------------
 -- ------------------------------------------------------------------------------------
 
+-- find duplicate employee names
+select FullName 
+	    from (select FullName, count(*) as cnt 
+		  from employee e1 
+		  group by FullName 
+		  having cnt >1) a; 
+	    
